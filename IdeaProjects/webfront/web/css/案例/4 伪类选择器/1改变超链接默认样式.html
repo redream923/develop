@@ -1,0 +1,38 @@
+<!--
+超链接默认样式
+    未被访问:字体蓝色,有下划线
+    访问后:字体紫色,有下划线
+    激活:字体为红色,有下划线
+    鼠标悬停:无
+-->
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            span:link{
+                color: blue;
+                text-decoration: underline;
+            }
+
+            /*如果需要定义4个伪类,必须按照下面顺序进行定义*/
+            #a2{text-decoration: none}
+            #a2:link{color: green}
+            #a2:visited{color: red}
+            #a2:hover{
+                font-size: 20px;
+                background-color: black;
+                color: white;
+            }
+            #a2:active{color: aqua}
+        </style>
+    </head>
+    <body>
+        <a href="#">默认样式</a><br/>
+        <span>自定义长连接样式</span><br/>
+        <a href="#" id="a2">改变超链接默认样式</a><br/>
+
+
+    </body>
+</html>

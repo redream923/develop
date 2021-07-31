@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            function show(){
+                alert("hahaha")
+            }
+
+            //1)执行周期性的定时任务
+            timeout= setInterval(show,3000);
+
+            //2)执行1次定时任务
+            setTimeout(clear,10000)
+            //取消定时任务
+            function clear() {
+                clearInterval(timeout)
+            }
+        </script>
+        <title>Title</title>
+    </head>
+    <body>
+
+    </body>
+</html>

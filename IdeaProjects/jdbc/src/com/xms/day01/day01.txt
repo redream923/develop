@@ -1,0 +1,74 @@
+1.JDBC
+Java提供的一组接口,用来对数据库进行操作(获取连接,执行sql操作)
+
+2.数据库驱动
+不同的数据库厂商针对JDBC这组接口提供的不同的实现
+
+3.获取数据库连接
+步骤:
+1)创建jdbc.properties配置文件
+    url=jdbc:mysql://ip:port/数据库名
+    user=用户名
+    password=密码
+    driverClass = com.mysql.jdbc.Driver
+2)读取配置文件
+3)加载驱动
+    Class.forName(driverClass);
+4)获取连接
+    DriverManager.getConnection(url,user,password);
+
+4.Statement
+1)获取Statement
+    conn.getStatement()
+2)执行增删改操作
+    boolean execute(sql)
+3)执行查询操作
+    ResultSet executeQuery(sql)
+
+5.ResultSet
+表示数据库结果集的数据表
+int getInt(int columnIndex)         :通过列索引号获取int类型的列值
+String getString(int columnIndex)   :通过列索引号获取String类型的列值
+Object getObject(int columnIndex)   :通过列索引号获取Object类型的列值
+
+int getInt(String columnLabel)         :通过列的别名获取int类型的列值
+String getString(String columnLabel)   :通过列的别名获取String类型的列值
+Object getObject(String columnLabel)   :通过列的别名获取Object类型的列值
+
+boolean next():判断是否由下一行数据
+
+ResultSetMetaData getMetaData():获取结果集元数据
+
+6.ResultSetMetadata
+结果集元数据,可以获取结果集的一些相关信息
+int getColumnCount():获取结果集总列数
+String getColumnName(columnIndex): 获取结果集中表的列名.
+String getColumnLabel(i+1):获取结果集中表列的别名
+
+7.Statement的弊端
+1)sql语句存在拼串操作(比较繁琐,容易出错)
+2)sql注入
+3)不可以操作Blob数据
+4)不可以批量插入
+
+8.PreparedStatement
+PreparedStatement是Statement的子接口,可以解决Statement的弊端
+表示预编译的SQL语句的对象
+conn.prepareUpdate()        :获取preparedStatement
+
+boolean execute()           :执行"更新"操作,成功返回true,失败返回false
+int  executeUpdate()        :执行"更新"操作,返回受到影响的行数
+ResultSet executeQuery()    :执行查询操作
+
+setInt(parameterIndex,value);       :给指定位置的占位符填充指定的值
+setString(parameterIndex,value);
+setObject(parameterIndex,value);
+tips:第一个占位符位置为1...
+
+
+
+
+
+
+
+

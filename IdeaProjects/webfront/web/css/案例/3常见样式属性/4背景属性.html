@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border: 1px solid red;
+            width: 300px;
+            height: 200px;
+            margin-top: 10px;
+        }
+        #d1{background-color: black}
+        #d2{background-image: url("../../img/view1.jpg")}
+        #d3{
+            background-image: url("../../img/logo.png");
+            background-repeat: no-repeat;
+        }
+        #d4{
+            background-image: url("../../img/logo.png");
+            background-repeat: repeat-x;
+        }
+        #d5{
+            background-image: url("../../img/logo.png");
+            background-repeat: repeat-y;
+        }
+        #d6{
+            background-image: url("../../img/logo.png");
+            background-repeat: repeat;
+        }
+        #d7{
+            background-image: url("../../img/logo.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .dv{
+            height: 500px;
+        }
+        #d8{
+            background-image: url("../../img/logo.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        #d9{
+            background-image: url("../../img/logo.png");
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">背景颜色为黑色</div>
+    <div id="d2">背景图片</div>
+    <div id="d3">背景不平铺</div>
+    <div id="d4">背景沿x方向平铺</div>
+    <div id="d5">背景沿y方向平铺</div>
+    <div id="d6">背景沿x,y方向平铺</div>
+    <div id="d7">设置背景图片位置为正中间</div>
+    <div id="d8" class="dv">背景图片不随着页面内容的滚动而滚动</div>
+    <div id="d9" class="dv">背景图片随着页面内容的滚动而滚动</div>
+</body>
+</html>

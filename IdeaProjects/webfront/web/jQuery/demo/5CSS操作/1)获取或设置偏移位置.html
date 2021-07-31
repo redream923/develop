@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                //获取偏移位置
+                var imgos = $("img").offset();
+                alert("top="+imgos.top+",left="+imgos.left);
+
+                //设置偏移位置
+                $("img").offset({
+                    top:100,
+                    left:150
+                });
+            })
+        </script>
+        <style>
+            img{
+                margin: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="../../img/1.jpg"/>
+    </body>
+</html>

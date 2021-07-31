@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        label.error{
+            background:url("../../img/unchecked.gif") no-repeat 0px 0px;
+            color: red;
+            padding-left: 15px;
+        }
+        label.success{
+            background: url("../../img/checked.gif" )no-repeat 0px 0px;
+            padding-left: 15px;
+        }
+    </style>
+    <script src="../../js/jquery-1.8.3.js"></script>
+    <script src="../../js/jquery.validate.js"></script>
+    <script src="../../js/messages_zh.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#f1").validate({
+                rules:{
+                    username:{
+                        required:true,
+                        maxlength:10,
+                        minlength:5
+                    },
+                    pwd:{
+                        required:true,
+                        digits:true,
+                        minlength:6
+                    },
+                    repwd:{
+                        required:true,
+                        digits:true,
+                        minlength:6,
+
+                    }
+                },
+                message:{
+                    username:{
+                        required:"用户名不能为空",
+                        maxlength:"用户名不得超过10位",
+                        minlength:"用户名不得少于5位"
+                    },
+                    pwd:{
+                        required:"密码不能为空",
+                        digits:"密码只能由数字组成",
+                        minlength:"密码不得超过6位"
+                    },
+                    repwd:{
+                        required:"确认密码不能为空",
+                        digits:"确认密码只能用数字组成",
+                        minlength:"确认密码不得超过6位",
+
+                    }
+                },
+                errorElement:"label",
+                success:function (label) {
+                    label.text("").addClass("success");
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <form action="#" id="f1">
+        用户名<input type="text" name="username"><br/>
+        密码<input type="password" name="pwd"><br/>
+        确认密码<input type="password" name="repwd"/><br/>
+        <input type="submit"/>
+    </form>
+</body>
+</html>

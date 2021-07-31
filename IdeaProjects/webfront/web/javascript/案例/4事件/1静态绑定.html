@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            function getValue() {
+                var username = document.getElementById("username");
+                alert(username.value)
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="username"><br/>
+        <!--在按钮上添加静态事件-->
+        <input type="button" value="点我试试" onclick="getValue()"><br/>
+
+    </body>
+</html>

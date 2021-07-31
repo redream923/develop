@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link href="../../css/seldemo.css" rel="stylesheet" />
+        <script src="../../js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#btn1").click(function () {
+                    $("div:visible").css("background-color","red");
+                });
+                $("#btn2").click(function () {
+                    $("div:hidden").show().css("background-color","blue")
+                });
+            })
+
+        </script>
+        <style>
+            div{
+                border: 1px solid red;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" value="获取可见div" id="btn1"/>
+        <input type="button" value="获取不可见的div" id="btn2"/>
+        <br/> <br/> <br/> <br/> <br/>
+
+        <div></div>
+        <div style="display: none"></div>
+
+    </body>
+</html>

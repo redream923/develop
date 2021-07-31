@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            div{
+                border: 1px solid red;
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+        <script src="../../js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#btn1").click(function () {
+                    $("div").on("mouseover mouseout",function (event) {
+                        if(event.type == "mouseover"){
+                            $("img").show()
+                        }else if(event.type=="mouseout"){
+                            $("img").hide()
+                        }
+                    })
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <input type="button" id="btn1" value="绑定事件"/>
+        <input type="button" id="btn2" value="解绑事件"/>
+        <div>
+            <img src="../../img/man01.jpg" width="200px" height="200px" style="display: none" >
+        </div>
+    </body>
+</html>

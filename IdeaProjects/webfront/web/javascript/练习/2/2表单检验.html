@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+        <link href="index.css" rel="stylesheet">
+        <style>
+            #from{
+                border: 1px solid red;
+                width: 79.5%;
+                height: 500px;
+                background-image: url("../../img/regist_bg.jpg");
+                padding-top: 100px;
+                padding-left: 180px;
+            }
+
+            table{
+                border: 1px solid blue;
+                width: 500px;
+                height: 400px;
+                background-color: white;
+            }
+            td{
+                border: 1px solid green;
+            }
+            #rt{
+                color: cadetblue;
+                font-size: 25px;
+                font-weight: bolder;
+            }
+            .ta{
+                text-align: right;
+            }
+        </style>
+        <script type="text/javascript">
+            //获取焦点
+            function check(id,message) {
+                var span = document.getElementById(id+"spain");
+                span.innerHTML = message;
+            }
+
+            //失去焦点
+            function ncheck(id,message) {
+                //删除提示信息
+                var span =document.getElementById(id+"spain")
+                span.innerHTML="";
+                //检查
+                var ele = document.getElementById(id);
+                if(ele.value == ""){
+                    //给出警告
+                    span.innerHTML= message;
+                }
+            }
+
+            //提交表单(假设用户名和密码都不为空,提交表单)
+            function submitForm() {
+                var username = document.getElementById("username");
+                var password = document.getElementById("password");
+                if(username!="" && password != ""){
+                    return true;//提交表单
+                }
+                return false;//bu提交表单.
+
+            }
+        </script>
+
+    </head>
+    <body>
+         <!--整个页面-->
+         <div id="index">
+             <!--1)logo-->
+             <div id="fd">
+                 <div id="logo">
+                     <img src="../../img/logo.jpg"  >
+                 </div>
+                 <div id="bz">
+                     <img src="../../img/header.png">
+                 </div>
+                 <div id="login">
+                     <a href="#">登录</a>
+                     <a href="#">注册</a>
+                     <a href="#">购物车</a>
+                 </div>
+             </div>
+             <!--表单-->
+
+             <div id="from" >
+                 <form action="#" method="get" onsubmit="return submitForm()" >
+
+                     <table>
+                         <!--注册文本-->
+                         <tr>
+                             <td colspan="2" >
+                                 <span id="rt">注册</span>
+                             </td>
+                         </tr>
+                         <!--用户名-->
+                         <tr>
+                             <td class="ta">用户名:</td>
+                             <td>
+                                 <input type="text" name="username" id="username" size="20px"
+                                        onfocus="check('username','用户名不能为空!')"
+                                        onblur="ncheck('username','用户名为空!')">
+                                 <span id="usernamespain"></span>
+                             </td>
+                         </tr>
+                         <!--密码-->
+                         <tr>
+                             <td class="ta">密码:</td>
+                             <td>
+                                 <input type="text" name="password" id="password" size="20px"
+                                        onfocus="check('password','密码不能为空!')"
+                                        onblur="ncheck('password','密码为空!')">
+                                 <span id="passwordspain"></span>
+                             </td>
+                         </tr>
+                         <!--确认密码-->
+                         <tr>
+                             <td class="ta">确认密码:</td>
+                             <td><input type="text" name="repwd" id="repwd" size="20px"></td>
+                         </tr>
+                         <!--姓名-->
+                         <tr>
+                             <td class="ta">姓名:</td>
+                             <td><input type="text" name="uname" id="uname" size="20px"></td>
+                         </tr>
+                         <!--性别-->
+                         <tr>
+                             <td class="ta">性别</td>
+                             <td>
+                                 <input type="radio" name="gender" value="n">男
+                                 <input type="radio" name="gender" value="w">女
+                             </td>
+                         </tr>
+                         <!--邮箱-->
+                         <tr>
+                             <td class="ta">邮箱</td>
+                             <td><input type="text" name="email" id="email" size="20px"></td>
+                         </tr>
+                         <!--出生日期-->
+                         <tr>
+                             <td class="ta">出生日期</td>
+                             <td><input type="date" name="birDate" id="birDate" size="20px"></td>
+                         </tr>
+                         <!--籍贯-->
+                         <tr>
+                             <td class="ta">籍贯</td>
+                             <td>
+                                 <select>
+                                     <option>--请选择--</option>
+                                     <option>苏州</option>
+                                     <option>南京</option>
+                                     <option>上海</option>
+                                 </select>
+                             </td>
+                         </tr>
+                         <tr >
+                             <td class="ta"> 验证码</td>
+                             <td>
+                                 <input type="text" name="code" id="code" size="20px">
+                                 <img src="../../img/yanzhengma.png">
+                             </td>
+                         </tr>
+                         <!--注册-->
+                         <tr align="center">
+                             <td colspan="2">
+                                 <input type="submit" value="注册">
+                             </td>
+                         </tr>
+                     </table>
+                 </form>
+             </div>
+
+             <!--7)正品保障-->
+             <div id="zp">
+                 <img src="../../img/footer.jpg"/>
+             </div>
+             <!--8)联系我们-->
+             <div id="foot">
+                 <a href>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <br>
+                 <br>
+                 <span>&copy;版权信息</span>
+             </div>
+         </div>
+    </body>
+</html>

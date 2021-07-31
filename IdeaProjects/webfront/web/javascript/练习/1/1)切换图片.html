@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            div{
+                border: 1px solid red ;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                text-align: center;
+            }
+        </style>
+        <script type="text/javascript">
+            //2) 设置img的路径
+            var i = 2;
+            function nextImg() {
+                //i) 获取img
+                var img = document.getElementById("img");
+                img.src="../../img/view"+i+".jpg";
+                i++;
+                //3重置i
+                if(i==7){
+                    i=1;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <img src="../../img/view1.jpg" width="300px" height="300px" id="img">
+            <br/>
+            <input type="button" value="下一张" onclick="nextImg()">
+        </div>
+    </body>
+</html>

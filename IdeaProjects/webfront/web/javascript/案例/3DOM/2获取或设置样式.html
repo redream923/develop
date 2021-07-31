@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            function changeDiv() {
+                //获取div
+                var div = document.getElementById("d1");
+                //获取div的高(类型为String)
+                var sheight = div.style.height;
+                //String->Number
+                var height = parseInt(sheight);
+                //重新设置高度
+                div.style.height = height*2+"px";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="d1" style="height: 100px; width: 100px; margin: auto;background-color: cadetblue"></div>
+        <input type="button" value="改变div" onclick="changeDiv()"/>
+    </body>
+</html>

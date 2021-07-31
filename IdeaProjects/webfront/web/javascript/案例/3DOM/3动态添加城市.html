@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            onload= function () {
+                document.getElementById("btn").onclick = function () {
+                    //创建option元素
+                    var option = document.createElement("option");
+                //    创建文本
+                    var text =  document.createTextNode("苏州");
+                    //文本添加到option中
+                    option.appendChild(text);
+                    //将option添加到select中
+                    document.getElementById("city").appendChild(option);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        籍贯:<select id="city">
+            <option>--请选择--</option>
+            <option>北京</option>
+            <option>上海</option>
+        </select> <br/>
+
+        <input type="button" id="btn" value="添加城市">
+
+
+    </body>
+</html>

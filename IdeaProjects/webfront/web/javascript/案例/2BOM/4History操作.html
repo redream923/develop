@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            function up() {
+                /*history.back();*/
+                history.go(-1)
+            }
+            function down() {
+                /*history.forward();*/
+                history.go(1)
+            }
+        </script>
+
+    </head>
+    <body>
+        <a href="前页面.html">点击进入前页面</a></br>
+        <a href="后页面.html">点击进入后页面</a></br>
+        <button id="btn1" onclick="up()">上一个URL</button>
+        <button id="btn2" onclick="down()">下一个URL</button>
+    </body>
+</html>

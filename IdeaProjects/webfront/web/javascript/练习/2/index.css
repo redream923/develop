@@ -1,0 +1,153 @@
+#index{
+    border: 1px solid red;
+    width: 90%;
+    height: 2200px;
+    margin: auto;
+}
+#fd{
+    border: 1px solid blue;
+    width: 100%;
+    height: 70px;
+}
+
+#logo{
+    border: 1px solid green;
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+#bz{
+    border: 1px solid green;
+    width: 37%; /*40*/
+    height: 100%;
+    float: left;
+}
+#login{
+    border: 1px solid green;
+    width: 28%;
+    height: 100%;
+    float: left;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+#logo>img{
+    height:50px;
+}
+a{
+    text-decoration: none;
+}
+#login>a{
+    font-size: 20px;
+}
+#navigate{
+    width: 100%;
+    height: 65px;
+    background-color: black;
+    padding-top: 2px;
+}
+#navigate>ul>a>li{
+    color: white;
+}
+#navigate>ul li{
+    display:inline;
+    margin-left: 15px;
+}
+#fp li{font-size: 30px}
+.op li{font-size: 25px}
+#lbt{
+    border: 1px solid red;
+    width: 100%;
+    height: 450px;
+}
+#lbt img{
+    width: 100%;
+    height: 100%;
+}
+#np{
+    border: 1px solid blue;
+    width: 100%;
+    height: 550px;
+}
+#pp{
+    border: 1px solid green;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    font-family: 宋体;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+#pp img{
+    height: 20px;
+}
+#pt{
+    border: 1px solid blue;
+    width: 100%;
+    height: 490px;
+}
+#left{
+    border: 1px solid blue;
+    width: 19%;
+    height: 100%;
+    float: left;
+}
+#left>img{
+    width: 100%;
+    height: 100%;
+}
+#right{
+    border: 1px solid gray;
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+#right>div{
+    float: left;
+}
+#big{
+    border: 1px solid red;
+    width: 50%;
+    height: 50%;
+}
+#big>img{
+    width: 100%;
+    height: 100%;
+}
+.small{
+    border: 1px solid blue;
+    width: 16.2%;
+    height: 45%;
+    text-align: center;
+    padding-top: 25px;
+}
+.small>img{
+    width: 95%;
+}
+.small>p{
+    color: red;
+}
+#ad{
+    border: 1px solid blue;
+    width: 100%;
+    height: 80px;
+}
+#ad>img{
+    width: 100%;
+    height: 100%;
+}
+
+#zp{
+    border: 1px solid blue;
+    width: 100%;
+    height: 60px;
+}
+#zp>img{
+    width: 100%;
+    height: 100%;
+}
+#foot{
+    text-align: center;
+    margin-top: 10px;
+}

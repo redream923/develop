@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+        <script>
+            //js页面加载:只会执行最后以个页面加载函数
+            onload = function () {
+                alert("haha");
+            }
+            onload = function () {
+                alert("heihei");
+            }
+
+                /*jQuery页面加载
+                1)比jQuery加载块
+                2)jQuery的页面加载都可以执行,且按照顺序依次执行.
+            */
+            jQuery(document).ready(function () {
+                alert("张三");
+            });
+
+            $(document).ready(function () {
+                alert("李四");
+            })
+
+            //简写
+            $(function () {
+                alert("王五");
+            })
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

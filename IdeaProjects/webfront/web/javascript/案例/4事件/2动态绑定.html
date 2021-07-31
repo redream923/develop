@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            onload = function () {
+                //获取按钮并绑定单机时间
+                var btn = document.getElementById("btn");
+                btn.onclick= function () {
+                    alert(document.getElementById("username").value)
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="username"><br/>
+        <!--动态的给按钮添加事件-->
+        <input type="button" value="点我试试" id="btn"/><br/>
+
+    </body>
+</html>

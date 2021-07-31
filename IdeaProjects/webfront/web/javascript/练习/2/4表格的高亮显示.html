@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            function changeBgColor( id,color) {
+                var tr1 = document.getElementById(id);
+
+                tr1.style.backgroundColor=color;
+            }
+
+           
+
+            
+        </script>
+    </head>
+    <body>
+
+        <table border="1px" align="center" width="300px" heiget="150px" id="tab" cellspacing="0px" cellpadding="0px" >
+            <tr onmouseover="changeBgColor('tr1','red')" id="tr1"  onmouseout="changeBgColor('tr1', 'white')">
+                <td>id</td>
+                <td>name</td>
+                <td>score</td>
+            </tr>
+            <tr onmouseover="changeBgColor('tr2','red')" id="tr2"  onmouseout="changeBgColor('tr2', 'white')">
+                <td>1001</td>
+                <td>张三</td>
+                <td>100</td>
+            </tr>
+            <tr onmouseover="changeBgColor('tr3','red')" id="tr3"  onmouseout="changeBgColor('tr3', 'white')">
+                <td>1002</td>
+                <td>李四</td>
+                <td>99</td>
+            </tr>
+            <tr onmouseover="changeBgColor('tr4','red')" id="tr4"  onmouseout="changeBgColor('tr4', 'white')">
+                <td>1003</td>
+                <td>王五</td>
+                <td>98</td>
+            </tr>
+            <tr onmouseover="changeBgColor('tr5','red')" id="tr5"  onmouseout="changeBgColor('tr5', 'white')">
+                <td>1004</td>
+                <td>赵六</td>
+                <td>97</td>
+            </tr>
+            <tr onmouseover="changeBgColor('tr6','red')" id="tr6"  onmouseout="changeBgColor('tr6', 'white')">
+                <td>1005</td>
+                <td>田七</td>
+                <td>96</td>
+            </tr>
+        </table>
+
+    </body>
+</html>

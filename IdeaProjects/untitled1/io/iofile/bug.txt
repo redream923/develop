@@ -1,0 +1,7 @@
+div方法发成了异常
+异常名ArithmeticException
+异常原因:class java.lang.ArithmeticException
+show方法发成了异常
+异常名NullPointerException
+异常原因:class java.lang.NullPointerException
+一共发生了2个异常

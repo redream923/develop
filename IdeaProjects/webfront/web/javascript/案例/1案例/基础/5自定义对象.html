@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            //自定义对象方式1
+                var zs = new Object();
+                zs.name = "张三";
+                zs.eat = function () {
+                    alert("吃大白菜");
+                }
+                alert(zs.name);
+                zs.eat();
+
+            //自定义对象方式2
+            var li = {
+                name : "李四",
+                eat:function () {
+                    alert("吃小青菜");
+                }
+            };
+            alert(li.name);
+            li.eat();
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

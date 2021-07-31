@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/jquery-1.8.3.js"></script>
+        <script>
+            $(function () {
+                //1)获取或设置元素内的html代码
+                $("#btn1").click(function () {
+                    alert($("div:first").html());
+                });
+                //2)设置元素内的html代码
+                $("#btn2").click(function () {
+                    $("div:first").html("<span style='color: red'>haha</span> ")
+                });
+
+                $("#btn3").click(function () {
+                    alert($("div:first").text());
+                });
+
+                $("#btn4").click(function () {
+                    $("div:first").text("heihei");
+                });
+
+                $("#btn5").click(function () {
+                    alert($(":text").val());
+                });
+
+                $("#btn6").click(function () {
+                    $(":text").val("张三");
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <div id="d1">
+            <div>哈哈</div>
+        </div>
+        <input type="text" value="zs"/><br/>
+
+        <input type="button" value="获取元素内的html代码" id="btn1"/><br/>
+        <input type="button" value="设置元素内的html代码" id="btn2"/><br/>
+        <input type="button" value="获取元素内的文本" id="btn3"/><br/>
+        <input type="button" value="设置元素内的文本" id="btn4"/><br/>
+        <input type="button" value="获取元素的value" id="btn5"/><br/>
+        <input type="button" value="设置元素的value" id="btn6"/><br/>
+    </body>
+</html>

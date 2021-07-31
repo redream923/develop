@@ -1,0 +1,22 @@
+
+
+#background{
+    border: 1px solid red;
+    background-image: url("../img/login_bg2.jpg" ) ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 1080px;
+    width: 1920px;
+    text-align: center;
+}
+#background>table{
+    border: 1px solid green;
+}
+#logo{
+    margin-top: 250px;
+}
+#login{
+    border: 10px solid red;
+    width: 500px;
+    height: 250px;
+}

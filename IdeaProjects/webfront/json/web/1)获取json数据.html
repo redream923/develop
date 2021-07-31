@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var stu={
+            "key1":11,
+            "key2":"abc",
+            "key3":true,
+            "key4":[1,"true","a"],
+            "key5":{            //json对象
+                "key51":22,
+                "key52":"bba"
+            },
+            "key6":[        //数组元素为json对象
+                {
+                    "key61":33,
+                    "key62":"ab"
+
+                },{
+                "key61":44,
+                "key62":"cd"
+                }
+            ]
+        };
+
+        //json数据的访问
+/*            alert(stu.key1);
+            for(var i=0;i<stu.key4.length;i++){
+                alert(stu.key4[i]);
+            }
+            alert(stu.key5.key51);
+            alert(stu.key6[0].key61);*/
+
+            for (var i = 0;i<stu.key6.length;i++){
+                alert(stu.key6[i].key61);
+                alert(stu.key6[i].key62);
+            }
+
+    //        JSON对象转字符串
+        var s = JSON.stringify(stu);
+            alert(s);
+
+            //json的字符串转成json对象
+        var stuJson = JSON.parse(s);
+        alert(stuJson);
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

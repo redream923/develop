@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../../js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                //获取所有隐藏域的值
+/*                $("input:hidden").each(function () {
+                    alert(this.value);
+                });*/
+
+/*                $("input:hidden").each(function (index,domEle) {
+                    alert("当期元素索引为"+index);
+                    alert("当期元素索"+domEle);
+                    alert("当期元素索值为"+domEle.value);
+
+                });*/
+
+                //3)$.each()
+                $.each($("input:hidden"),function (index,domeEle) {
+                    alert("index="+index+",val=" +domeEle.value)
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <input type="hidden" value="hello"/>
+        <input type="hidden" value="java"/>
+        <input type="hidden" value="world"/>
+    </body>
+</html>

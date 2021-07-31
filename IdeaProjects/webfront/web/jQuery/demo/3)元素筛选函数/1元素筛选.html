@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link href="../../css/seldemo.css"rel="stylesheet"/>
+        <script src="../../js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#btn1").click(function () {
+                    $("div").eq(2).css("background-color","red");
+                });
+
+                $("#btn2").click(function () {
+                    $("div").first().css("background-color","red");
+                });
+
+                $("#btn3").click(function () {
+                    $("div").last().css("background-color","red");
+                });
+
+                $("#btn4").click(function () {
+                    $("div").filter(":even").css("background-color","red");
+                });
+
+                $("#btn5").click(function () {
+                    $("div").has(".mini").css("background-color","red");
+                });
+                $("#btn6").click(function () {
+                    $("div").not("#one").css("background-color","red");
+                });
+                $("#btn7").click(function () {
+                    alert($("#four").is(":empty"));
+                });
+                $("#btn8").click(function () {
+                    $("body").children("div").css("background-color","red");
+                });
+
+
+                $("#btn9").click(function () {
+                    alert($("body").find("div").length);
+                });
+
+                $("#btn10").click(function () {
+                    $("#one").next("div").css("background-color","red");
+                });
+
+                $("#btn11").click(function () {
+                    $("#one").nextAll("div").css("background-color","red");
+                });
+
+                $("#btn12").click(function () {
+                    $("#one").nextUntil("span").css("background-color","red");
+                });
+
+                $("#btn13").click(function () {
+                    $(".mini").parent().css("background-color","red");
+                });
+                $("#btn14").click(function () {
+                    $("#two").siblings("div").css("background-color","red");
+                });
+
+                $("#btn15").click(function () {
+                    $("#two").add("four").css("background-color","red");
+                });
+
+
+            })
+        </script>
+    </head>
+    <body>
+    <!--1)过滤-->
+    <input type="button" value="选择第3个div" id="btn1"/>
+    <input type="button" value="选择第1个div" id="btn2"/>
+    <input type="button" value="选择最后1个div" id="btn3"/>
+    <input type="button" value="通过filter选择索引为偶数的div" id="btn4"/>
+    <input type="button" value="选择含有mini的div" id="btn5"/>
+    <input type="button" value="选择div中id!=one的div" id="btn6"/>
+    <input type="button" value="判断id=four的div是否为empty" id="btn7"/><br/>
+
+    <!--2)查找-->
+    <input type="button" value="查找body下div子元素" id="btn8"/>
+    <input type="button" value="查找body下所有的div元素" id="btn9"/>
+    <input type="button" value="查找id=one的下一个兄弟div元素" id="btn10"/>
+    <input type="button" value="查找id=one的后面所有的兄弟div元素" id="btn11"/>
+    <input type="button" value="查找id=one到span之间的所有的兄弟元素" id="btn12"/>
+    <input type="button" value="查找mini的所有父元素" id="btn13"/>
+    <input type="button" value="查找id=two的所有兄弟div元素" id="btn14"/>
+
+    <!--3)串联-->
+    <input type="button" value="查找id=two元素和id=four的元素" id="btn15">
+    <br> <br> <br>
+    <br> <br> <br>
+
+        <div id="one">
+            <div class="mini">111</div>
+        </div>
+        <div id="two">
+            <div class="mini">223</div>
+            <div class="mini">333</div>
+        </div>
+        <div id="three">
+            <div class="mini">444</div>
+            <div class="mini">555</div>
+            <div class="mini">666</div>
+        </div>
+    <span></span>
+        <div id="four"></div>
+        <hr/>
+        <br/>
+
+    </body>
+</html>

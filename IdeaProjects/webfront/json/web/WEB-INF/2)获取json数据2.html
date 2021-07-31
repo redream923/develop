@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            var stu={"name":"zs","age":11,"gender":true};
+/*            for(var key in stu){ //key:表示所有的键
+                alert(stu[key])
+            }*/
+            var arr = [
+                {"name":"zs","age":11,"gender":true},
+                {"name":"ls","age":12,"gender":true},
+                {"name":"ww","age":13,"gender":true}
+            ];
+
+            var persons = {"persons":[
+                    {"name":"zs","age":11,"gender":true},
+                    {"name":"ls","age":12,"gender":true},
+                    {"name":"ww","age":13,"gender":true}
+                ]};
+            for(var i in arr){
+                for(key in arr[i]){
+                    alert(arr[i][key]);
+                }
+            }
+
+            for(var i in persons.persons){
+                for(key in arr[i]){
+                    alert(arr[i][key]);
+                }
+            }
+
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

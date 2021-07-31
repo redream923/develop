@@ -1,0 +1,60 @@
+1.PreparedStatement的批处理
+addBath():将sql添加到批处理命令中(缓冲区)
+executeBatch():执行批处理中所有的sql操作
+clearBatch();清空批处理命令
+
+tips:
+1)  MySql默认状态下不支持批处理,想要使得批处理操作有效,需要打开批处理的支持
+    url=jdbc:mysql://ip:port/数据库名?rewriteBatchedStatements = true
+2)  批处理操作需要手动提交
+
+2.事务
+conn.setAutoCommit(false):设置事务不自动提交
+conn.commit():提交事务
+conn.rollback():回滚事务
+
+3.数据库连接池
+传统连接问题:
+每次执行一个数据库操作(事务),都需要进行连接,用完后需要关闭连接
+连接对象不可以重用,且每次进行连接和关闭连接都需要耗费一定时间,效率较差.
+不可以控制连接对象个数,如果连接太多,可能会发生内存溢出
+
+解决:使用数据库连接池
+好处:
+1)连接对象可以重用
+2)系统响应提升
+3)可以进行资源分配,方便统一管理
+
+4.数据库连接池实现方式
+1)DBCP
+    Apache提供的技术,速度比C3P0快,稳定性比C3P0差
+2)C3P0
+    速度较慢,稳定相比
+3)Druid
+    阿里提供的技术,集合了DBCP和C3P0的优点
+
+5.DBCP
+5.1导包
+    commons-dbcp-1.4.jar
+    commons-pool-1.5.5.jar
+5.2提供配置文件dbcp.properties
+    url=jdbc:mysql://localhost:3306/test
+    username=root
+    password=1234
+    driverClassName = com.mysql.jdbc.Driver
+
+5.3使用
+DataSource BasicDataSourceFactory.createDataSource(Properties pro):创建DBCP连接池
+DataSource.getConnection():获取连接
+
+6.C3P0
+6.1导包
+    c3p0-0.9.5.2jar
+    mchange-commons-java-0.2.12.jar
+6.2提供配置文件c3p0-config.xml
+
+6.3使用
+    new ComboPooledDataSource():创建C3P0连接池
+
+7.DBUtils
+    第三方提供的jar包,里面提供了常见操作数据库的方法

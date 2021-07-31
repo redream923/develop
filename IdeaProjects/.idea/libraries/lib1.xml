@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/webfront/xml/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/webfront/xml/lib/jaxen-1.1-beta-6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/webfront/xml/lib/jsoup-1.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/webfront/xml/lib/JsoupXpath-0.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link href="../../css/seldemo.css" rel="stylesheet" />
+        <script src="../../js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#btn1").click(function () {
+                    $("div[class]").css("background-color","red");
+                });
+                $("#btn2").click(function () {
+                    $("div[id=one]").css("background-color","red");
+                });
+                $("#btn3").click(function () {
+                    $("div[id!=one]").css("background-color","red");
+                });
+                $("#btn4").click(function () {
+                    $("div[id^=t]").css("background-color","red");
+                });
+                $("#btn5").click(function () {
+                    $("div[id$=e]").css("background-color","red");
+                });
+                $("#btn6").click(function () {
+                    $("div[id*=o]").css("background-color","red");
+                });
+                $("#btn7").click(function () {
+                    $("div[id^=t][id*=o]").css("background-color","red");
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" value="选择含有class属性的div元素" id="btn1"/>
+        <input type="button" value="选择id=one的div元素" id="btn2"/>
+        <input type="button" value="选择id!=one的div元素" id="btn3"/>
+        <input type="button" value="选择id以t开头的div元素" id="btn4"/>
+        <input type="button" value="选择id以e结尾的div元素" id="btn5"/>
+        <input type="button" value="选择id中包含o的div元素" id="btn6"/>
+        <input type="button" value="选择id中以t开头且包含o的div元素" id="btn7"/>
+        <br/> <br/> <br/> <br/> <br/>
+
+        <div id="one">
+            <div class="mini">111</div>
+        </div>
+        <div id="two">
+            <div class="mini">222</div>
+            <div class="mini">333</div>
+        </div>
+        <div id="three">
+            <div class="mini">444</div>
+            <div class="mini">555</div>
+            <div class="mini">666</div>
+            <p></p>
+        </div>
+
+        <span id="four"></span>
+        <br/>  <br/><br/>
+
+    </body>
+</html>

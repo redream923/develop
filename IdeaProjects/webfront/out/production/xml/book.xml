@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<books>
+    <book sn="215642165">
+        <name>十万个为什么</name>
+        <price>9.9</price>
+        <author>路人甲</author>
+    </book>
+
+    <book sn="21564254">
+        <name>Java从入门到入土</name>
+        <price>19.9</price>
+        <author>Jame</author>
+    </book>
+
+</books>

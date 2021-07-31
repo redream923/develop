@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #p1{color: red}
+        #p2{text-align: left}
+        #p3{text-align: right}
+        #p4{text-align: center}
+        #p4+div{text-align: center}
+        a{text-decoration: none}
+        #p5{text-decoration: underline}
+        #p6{text-decoration: overline}
+        #p7{text-decoration: line-through}
+
+        #p8{
+            font-size: 15px;
+            text-indent: 30px;
+        }
+
+        #p9{text-transform: capitalize}
+        #p10{text-transform: uppercase}
+        #p11{text-transform: lowercase}
+
+        #p12{letter-spacing: 10px}
+        #p13{word-spacing: 10px}
+        #p14{line-height:  25px}
+        #p15{line-height:  35px}
+
+        #d1{
+            border: 1px solid red;
+            width: 100%;
+            height: 60px;
+            background-color: black;
+            line-height: 60px;
+        }
+        #d1>div{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">设置字体颜色为红色</p>
+    <p id="p2">设置文本水平左对齐</p>
+    <p id="p3">设置文本水平右对齐</p>
+    <p id="p4">设置文本水平居中对齐</p>
+
+    <div>
+        <img src="../../img/view1.jpg" width="100px" height="100px"/>
+    </div>
+    <a href="#" >去除超链接下划线</a>
+    <p id="p5">设置文本下划线</p>
+    <p id="p6">设置文本顶划线</p>
+    <p id="p7">设置文本删除线</p>
+    <p id="p8">
+        这是文本缩进案例,首先需要设置文本字体大小,然后缩进两个字体大小.
+        这是文本缩进案例,首先需要设置文本字体大小,然后缩进两个字体大小.
+        这是文本缩进案例,首先需要设置文本字体大小,然后缩进两个字体大小.
+        这是文本缩进案例,首先需要设置文本字体大小,然后缩进两个字体大小.
+        这是文本缩进案例,首先需要设置文本字体大小,然后缩进两个字体大小.
+    </p>
+
+    <p id="p9">首字母大写 hEllO</p>
+    <p id="p10">都是大写 hEllO</p>
+    <p id="p11">都是小写 hEllO</p>
+
+
+    <p>正常字符为xxx,hello world java</p>
+    <p id="p12">字符间距为10px,hello world java</p>
+    <p id="p13">单词间距为10px,hello world java</p>
+    <p id="p14">设置行高为25px</p>
+    <p id="p15">设置行高为35px</p>
+
+    <div id="d1">
+        <div>通过行高设置居中对齐</div>
+    </div>
+
+</body>
+</html>

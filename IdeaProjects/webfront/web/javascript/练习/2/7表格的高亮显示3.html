@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            onload = function () {
+                var trs = document.getElementsByTagName("tr");
+                for (var i=0;i<trs.length;i++){
+                    var tr = trs[i];
+
+
+                    //給當前行註冊鼠標懸停和鼠标移出事件
+                    tr.onmouseover = function () {
+                        //设置gbc属性
+                        this.setAttribute("gbc",this.style.backgroundColor)
+                        this.style.backgroundColor = "red";
+                    }
+                    
+                    tr.onmouseout = function () {
+                        //还原背景色
+                        this.style.backgroundColor = this.getAttribute("gbc");
+                    }
+                }
+
+            }
+
+           
+
+            
+        </script>
+    </head>
+    <body>
+
+        <table border="1px" align="center" width="300px" heiget="150px" id="tab" cellspacing="0px" cellpadding="0px" style="background-color: darkgreen" >
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>score</td>
+            </tr>
+            <tr>
+                <td>1001</td>
+                <td>张三</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>1002</td>
+                <td>李四</td>
+                <td>99</td>
+            </tr>
+            <tr>
+                <td>1003</td>
+                <td>王五</td>
+                <td>98</td>
+            </tr>
+            <tr>
+                <td>1004</td>
+                <td>赵六</td>
+                <td>97</td>
+            </tr>
+            <tr>
+                <td>1005</td>
+                <td>田七</td>
+                <td>96</td>
+            </tr>
+        </table>
+
+    </body>
+</html>

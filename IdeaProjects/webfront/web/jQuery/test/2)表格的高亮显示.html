@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("tr:even").css("background-color","gray");
+                $("tr:odd").css("background-color","lightblue");
+                /*高亮*/
+                //方式1
+/*                $("tr").mouseover(function () {
+                    //保存原有的背景色
+                    $(this).attr("bgc",$(this).css("background-color"))
+                    //设置新的背景色
+                    $(this).css("background-color","red");
+
+                });
+                $("tr").mouseout(function () {
+                    $(this).css("background-color" , $(this).attr("bgc"));
+                });*/
+
+/*                //方式2
+                $("tr").mouseover(function () {
+                    //保存原有的背景色
+                    $(this).attr("bgc",$(this).css("background-color"));
+                    //设置新的背景色
+                    $(this).css("background-color","red");
+
+                }).mouseout(function () {
+                    $(this).css("background-color" , $(this).attr("bgc"));
+                });*/
+                
+                //方式3
+                $("tr").hover(function () {
+                    $(this).attr("bgc",$(this).css("background-color"));
+                    //设置新的背景色
+                    $(this).css("background-color","red");
+                },function () {
+                    $(this).css("background-color" , $(this).attr("bgc"));
+                });
+                
+            })
+            
+        </script>
+    </head>
+    <body>
+
+        <table border="1px" align="center" width="300px" heiget="150px" id="tab" cellspacing="0px" cellpadding="0px" style="background-color: darkgreen" >
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>score</td>
+            </tr>
+            <tr>
+                <td>1001</td>
+                <td>张三</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>1002</td>
+                <td>李四</td>
+                <td>99</td>
+            </tr>
+            <tr>
+                <td>1003</td>
+                <td>王五</td>
+                <td>98</td>
+            </tr>
+            <tr>
+                <td>1004</td>
+                <td>赵六</td>
+                <td>97</td>
+            </tr>
+            <tr>
+                <td>1005</td>
+                <td>田七</td>
+                <td>96</td>
+            </tr>
+        </table>
+
+    </body>
+</html>

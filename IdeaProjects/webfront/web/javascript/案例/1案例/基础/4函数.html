@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            //函数定义方式1
+            function f() {
+                alert("无参函数")
+            }
+            f();
+
+            function f2(a,b) {
+                alert(a+b);
+            }
+
+            function f3(a,b) {
+                return a+b;
+            }
+            alert(f3(1,2));
+            //函数定义方式2
+            var getMax = function (a,b) {
+                return a>b?a:b;
+            }
+            alert(getMax(5,8));
+
+            //函数不可以重载
+            var fun= function () {
+                alert("hello");
+            }
+            var fun = function (a) {
+                alert("hello" + a);
+            }
+            /*当存在多个函数名相同的函数,使用最后定义的函数.*/
+            fun();//helloundefined
+            fun("world");//helloworld
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            .dd{
+                border: 1px solid red;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+        <script src="../../js/jquery-1.8.3.js"></script>
+        <script>
+            $(function () {
+                $("#btn1").click(function () {
+                    $("div").addClass("dd");
+                });
+                $("#btn2").click(function () {
+                    $("div").removeClass("dd");
+                });
+
+                $("#btn3").click(function () {
+                    $("div").toggleClass("dd");
+                });
+
+            })
+        </script>
+    <body>
+
+    <div ></div>
+    <div></div>
+
+    <input type="button" value="给第所有div添加类dd" id="btn1"/><br/>
+    <input type="button" value="删除所有div的类" id="btn2"/><br/>
+    <input type="button" value="添加/删除所有div的dd类" id="btn3"/><br/>
+    </body>
+</html>

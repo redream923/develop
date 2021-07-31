@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+        <link href="index.css" rel="stylesheet">
+        <script type="text/javascript">
+            //页面加载
+            onload = function () {
+                //设置定时任务
+                setInterval(changeImg,3000);
+            }
+            function changeImg() {
+                var i = 1;
+                var lbt = document.getElementById("lbtimg");
+                lbt.src="../../img/"+i+".jpg";
+                i++;
+                if (i==3){
+                    i=0;
+                }
+            }
+        </script>
+    </head>
+    <body>
+         <!--整个页面-->
+         <div id="index">
+             <!--1)logo-->
+             <div id="fd">
+                 <div id="logo">
+                     <img src="../../img/logo.jpg"  >
+                 </div>
+                 <div id="bz">
+                     <img src="../../img/header.png">
+                 </div>
+                 <div id="login">
+                     <a href="#">登录</a>
+                     <a href="#">注册</a>
+                     <a href="#">购物车</a>
+                 </div>
+             </div>
+             <!--2)navigate-->
+             <div id="navigate">
+                  <ul>
+                      <a href="#" id="fp"><li >首页</li></a>
+                      <a href="#" class="op"><li>手机电器</li></a>
+                      <a href="#" class="op"><li>生活用品</li></a>
+                      <a href="#" class="op"><li>厨房用品</li></a>
+                      <a href="#" class="op"><li>服饰箱包</li></a>
+                  </ul>
+             </div>
+             <!--3)轮播图-->
+             <div id="lbt">
+                 <img src="../../img/1.jpg" id="lbtimg">
+             </div>
+             <!--4)最新商品-->
+             <div id="np">
+                 <!--文字-->
+                 <div id="pp">
+                     <span>最新商品</span>
+                     <img src="../../img/title2.jpg">
+                 </div>
+                 <!--图片-->
+                 <div id="pt">
+                     <div id="left">
+                         <img src="../../img/big01.jpg"/>
+                     </div>
+                     <div id="right">
+                         <div id="big">
+                             <img src="../../img/middle01.jpg">
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!--5)广告-->
+             <div id="ad">
+                 <img src="../../img/ad.jpg"/>
+             </div>
+             <!--6)热门商品-->
+             <div id="np">
+                 <!--文字-->
+                 <div id="pp">
+                     <span>热门商品</span>
+                     <img src="../../img/title2.jpg">
+                 </div>
+                 <!--图片-->
+                 <div id="pt">
+                     <div id="left">
+                         <img src="../../img/big01.jpg"/>
+                     </div>
+                     <div id="right">
+                         <div id="big">
+                             <img src="../../img/middle01.jpg">
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                         <div class="small">
+                             <img src="../../img/small04.jpg"><br/>
+                             <a>电饭锅</a>
+                             <p>￥299</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!--7)正品保障-->
+             <div id="zp">
+                 <img src="../../img/footer.jpg"/>
+             </div>
+             <!--8)联系我们-->
+             <div id="foot">
+                 <a href>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <br>
+                 <br>
+                 <span>&copy;版权信息</span>
+             </div>
+         </div>
+    </body>
+</html>

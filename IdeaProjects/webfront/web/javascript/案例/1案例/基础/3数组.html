@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript" >
+            //数组初始化方式1
+            var arr= [];//空数组
+            alert(arr.length);//0
+            alert(arr[0]);//undefined
+
+            var arr2 = [123];
+            alert(arr2.length);//3
+            alert(arr2[0]);
+
+            var arr3 = [1,"a",true];
+            alert(arr3.length)//3
+            alert(arr3[arr3.length-1]);//true
+            //数组初始化方式2
+            var arr4 = new Array();
+            alert(arr4.length);//0
+            alert(arr4[0])//undefined
+
+            var arr5 = new Array("a","b");
+            alert(arr5.length)//2
+
+            //注意:JS中的数组长度是可变的
+            arr5[5]="666";
+            alert(arr5.length)//6
+            //在js中,undefined和null表示是含义相同,可以看成是同一个东西.
+            alert(arr5[3]);//undefined
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

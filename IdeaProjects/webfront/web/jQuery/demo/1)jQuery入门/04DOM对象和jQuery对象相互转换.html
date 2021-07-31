@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript" src="../../js/jquery-1.8.3.js"></script>
+        <script>
+            function writeData() {
+                //document.getElementById("s1").innerHTML = "你真丑!";
+                 $("#s1")[0].innerHTML = "你真丑!";
+                //$("#s1").get(0).innerHTML = "你真丑!";
+            }
+
+            $(function () {
+                //动态注册事件
+                $("#btn2").click(function () {
+                    // $("#s1").html("萌萌哒!");
+                    //DOM对象转成jQuery对象
+                    $(document.getElementById("s1")).html("萌萌哒!");
+                });
+                
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" value="JS写入数据" onclick="writeData()"><br/>
+        <input type="button" value="jQuery写入数据" id="btn2"><br/>
+        张三:<span id="s1">你好帅!</span>
+    </body>
+</html>

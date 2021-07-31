@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #dd{
+                border: 1px solid red;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+        <script src="../../js/jquery-1.8.3.js"></script>
+        <script>
+            $(function () {
+                //1)获取或设置元素内的html代码
+                $("#btn1").click(function () {
+                    alert($("div:first").attr("id"));
+                });
+                //2)设置元素内的html代码
+                $("#btn2").click(function () {
+                    $("div:first").attr("id","dd");
+                });
+
+                $("#btn3").click(function () {
+                    $("div:first").removeAttr("id");
+                });
+
+                $("#btn4").click(function () {
+                    alert($(":checkbox:first").prop("checked"));
+                });
+                $("#btn5").click(function () {
+                    $(":checkbox:eq(1)").prop("checked","checked");
+                });
+                $("#btn6").click(function () {
+                    $(":checkbox:eq(0)").removeProp("checked");
+                });
+
+            })
+        </script>
+    </head>
+    <body>
+        <div id="d1">
+            <div>哈哈</div>
+        </div>
+        <input type="checkbox" value="read" name="hobby" checked="checked"/>读书
+        <input type="checkbox" value="look" name="hobby" />看报
+
+        <input type="button" value="获取第一个div的id属性" id="btn1"/><br/>
+        <input type="button" value="设置第一个div的id属性" id="btn2"/><br/>
+        <input type="button" value="删除第一个div的id属性" id="btn3"/><br/>
+        <input type="button" value="查看第一个复选框是否被选中" id="btn4"/><br/>
+        <input type="button" value="设置第二个复选框被选中" id="btn5"/><br/>
+        <input type="button" value="删除第一个复选框的checked属性" id="btn6"/><br/>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            function up() {
+                location.href = "前页面.html";
+            }
+            function down() {
+                location.href = "后页面";
+            }
+            onload = function () {
+                var span =  document.getElementById("span");
+                span.style.color = "blue";
+                //动态注册事件
+                span.onmouseover = function(){
+                    span.style.cursor = "pointer";
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+    <input type="button" value="前页面" onclick="up()" id="btn"/><br>
+        <span id="span" onclick="down()">后页面</span>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+            //数据源
+
+
+            $(function () {
+                var cities = new Array(3);
+                cities[0] = new Array("南京","苏州","无锡","南通");
+                cities[1] = new Array("杭州","宁波","义务","绍兴");
+                cities[2] = new Array("青岛","烟台","济南","淄博");
+                cities[3] = new Array("长沙","衡阳","岳阳","张家界");
+                //省份下拉列表动态注册change
+                $("#provence").change(function () {
+                   //获取选中省份的value
+                    var val = $(this).val();
+                    //清空城市列表
+                    $("#city").empty();
+                    //遍历选中省份的城市数组,将城市添加到城市列表中
+                    $.each(cities[val],function (index,cityName) {
+                        //城市下拉列表中插入option
+                        $("#city").append("<option>"+cityName+"</option>");
+                    });
+                });
+            });
+
+
+        </script>
+    </head>
+    <body>
+        籍贯:
+        <!--this表示当前被选中的下拉列表项-->
+        <select id="provence" >
+            <option>---请选择---</option>
+            <option value="0">江苏省</option>
+            <option value="1">浙江省</option>
+            <option value="2">山东省</option>
+            <option value="3">湖南省</option>
+        </select>
+
+        <select id="city">
+
+        </select>
+    </body>
+</html>

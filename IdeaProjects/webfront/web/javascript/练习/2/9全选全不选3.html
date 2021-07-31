@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            onload = function () {
+                document.getElementById("fc").onclick = function () {
+                    //获取下面所有复选框
+                    var boxes = document.getElementsByClassName("oc");
+                    //设置下面复选框状态为全选复选框的状态
+                    for(var i=0;i<boxes.length;i++){
+                        boxes[i].checked = this.checked;
+                    }
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1px" align="center" width="300px" heiget="150px" id="tab" cellspacing="0px" cellpadding="0px">
+            <tr>
+                <td><input type="checkbox" id="fc" ></td>
+                <td>id</td>
+                <td>name</td>
+                <td>score</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="oc"></td>
+                <td>1001</td>
+                <td>张三</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="oc"></td>
+                <td>1002</td>
+                <td>李四</td>
+                <td>99</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="oc"></td>
+                <td>1003</td>
+                <td>王五</td>
+                <td>98</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="oc"></td>
+                <td>1004</td>
+                <td>赵六</td>
+                <td>97</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="oc"></td>
+                <td>1005</td>
+                <td>田七</td>
+                <td>96</td>
+            </tr>
+        </table>
+    </body>
+</html>

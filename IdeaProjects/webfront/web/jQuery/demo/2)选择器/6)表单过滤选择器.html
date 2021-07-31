@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link href="../../css/seldemo.css" rel="stylesheet" />
+        <script src="../../js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#btn1").click(function () {
+                    $(":input").css("background-color","red");
+                });
+                $("#btn2").click(function () {
+                    $(":text").css("background-color","red");
+                });
+                $("#btn3").click(function () {
+                    $(":password").css("background-color","red");
+                });
+                $("#btn4").click(function () {
+                    $(":radio:first")[0].checked = true;
+                });
+                $("#btn5").click(function () {
+                    $(":checkbox:first")[0].checked = true;
+                });
+                $("#btn6").click(function () {
+                    $(":file").css("background-color","red");
+                });
+                $("#btn7").click(function () {
+                    $(":submit").css("background-color","red");
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" value="选择所有的Input,textarea,select,button元素" id="btn1"/>
+        <input type="button" value="选择所有的单行文本输入框" id="btn2"/>
+        <input type="button" value="选择密码框" id="btn3"/>
+        <input type="button" value="选中第一个单选按钮" id="btn4"/>
+        <input type="button" value="选中第一个复选按钮" id="btn5"/>
+        <input type="button" value="选择上传域" id="btn6"/>
+        <input type="button" value="选择提交按钮" id="btn7"/>
+        <br/> <br/> <br/> <br/> <br/>
+
+        <form action="#" method="get" enctype="multipart/form-data">
+                用户名:<input type="text" name="username"><br/>
+                密码:<input type="password" name="password"><br/>
+                性别:<input type="radio" name="gender">男
+                    <input type="radio" name="gender">女<br/>
+                爱好:<input type="checkbox" name="hobby">读书
+                    <input type="checkbox" name="hobby">看报<br/>
+            自我介绍:<textarea cols="20" rows="4"></textarea><br/>
+                身份证:<input type="file" name="code"><br/>
+                籍贯:
+                <select>
+                    <option>江苏</option>
+                </select>
+                <br/>
+                <input type="submit" value="提交">
+                <input type="reset" value="重置">
+                <input type="button" value="p">
+                <button>普通按钮</button>
+        </form>
+
+    </body>
+</html>

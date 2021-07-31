@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            // ==和===的区别
+            var a=5;
+            var b=5;
+            var c="5";
+            alert(a==c);//true
+            alert(a===c);//false
+            alert(a===b);//true
+
+            /*
+            js逻辑运算符和java有些不一样.
+            在js中所有变量都可以作为一个Boolean类型的变量去使用
+            0,null,undefined,""可以看成false
+
+            结果是什么要看谁能决定最终的结果.
+            */
+            alert(0&&1);//0
+            alert(0&&1 == 1);//0
+            alert((0&&1) == 1);//false
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

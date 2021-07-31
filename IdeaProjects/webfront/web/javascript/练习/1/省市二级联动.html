@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            //数据源
+            var cities = new Array(3);
+            cities[0] = new Array("南京","苏州","无锡","南通");
+            cities[1] = new Array("杭州","宁波","义务","绍兴");
+            cities[2] = new Array("青岛","烟台","济南","淄博");
+            cities[3] = new Array("长沙","衡阳","岳阳","张家界");
+
+            //动态添加城市
+            function addCities(obj) {
+                //获取选中的省份的城市
+                var city = document.getElementById("city");
+                var cityAry =  cities[obj.value];
+                //清空城市下拉列表中除了第一个以外的所有列表项
+                city.options.length = 1;
+
+                for(var i = 0;i<cityAry.length;i++){
+                    //获取城市文本
+                    var cityText = cityAry[i];
+                    //创建option
+                    var option  = document.createElement("option");
+                    //创建文本节点
+                    var cityTestNode = document.createTextNode(cityText);
+                    //将文本节点放入到option中
+                    option.appendChild(cityTestNode);
+                    //在city下拉列表放入option
+                    city.appendChild(option);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        籍贯:
+        <!--this表示当前被选中的下拉列表项-->
+        <select id="provence" onchange="addCities(this)">
+            <option>---请选择---</option>
+            <option value="0">江苏省</option>
+            <option value="1">浙江省</option>
+            <option value="2">山东省</option>
+            <option value="3">湖南省</option>
+        </select>
+
+        <select id="city">
+            <option>---请选择---</option>
+        </select>
+    </body>
+</html>

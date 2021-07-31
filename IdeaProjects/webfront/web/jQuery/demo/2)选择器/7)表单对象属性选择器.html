@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link href="../../css/seldemo.css" rel="stylesheet" />
+        <script src="../../js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#btn1").click(function () {
+                    $("text:enabled").val("hahaha");
+                });
+                $("#btn2").click(function () {
+                    $("text:disabled").val("heihei");
+                });
+                $("#btn3").click(function () {
+                    var $eles = $(":checkbox:checked");
+                    $eles.each(function () {
+                        alert($(this).val());
+                    });
+
+                });
+                $("#btn4").click(function () {
+                    var $eles = $(":selected");
+                    $eles.each(function () {
+                        alert(this.value);
+                    });
+                });
+
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" value="设置可用文本输入框的value值" id="btn1"/>
+        <input type="button" value="设置不可用文本输入框的value值" id="btn2"/>
+        <input type="button" value="获取所有被选中的单选按钮,复选按钮的值" id="btn3"/>
+        <input type="button" value="获取所有被选中的下拉列表选项的值" id="btn4"/>
+        <br/> <br/> <br/> <br/> <br/>
+
+        <form action="#" method="get" >
+                用户名:<input type="text" name="username"><br/>
+                姓名:<input type="text" name="username" disabled="disabled" value="张三"><br/>
+                性别:
+                <input type="radio" name="gender" value="n" checked="checked">男
+                <input type="radio" name="gender" value="w">女<br/>
+                爱好:<input type="checkbox" name="hobby" value="read" checked="checked">读书
+                    <input type="checkbox" name="hobby" value="look">看报
+                    <input type="checkbox" name="hobby" value="play" checked="checked">玩游戏<br/>
+                籍贯:
+                <select multiple="multiple" size="4">
+                    <option selected="selected" value="js">江苏</option>
+                    <option value="zj">浙江</option>
+                    <option selected="selected" value="sh">上海</option>
+                    <option value="ah">安徽</option>
+                </select>
+                <br/>
+                <input type="submit" value="提交">
+        </form>
+
+    </body>
+</html>

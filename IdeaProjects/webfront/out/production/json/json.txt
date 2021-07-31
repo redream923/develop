@@ -1,0 +1,59 @@
+1.JSON
+JSON: JavaScript 对象表示法(JavaScript Object Notation).
+JSON: 是存储和交换文本信息的语法.(输入信息的格式)类似于 XML
+JSON: 比 XML更小,更快,更易解析
+
+例如现有1个对象
+Student s = new Student();
+s.setName = "张三";
+s.setAge = 11;
+s.setGender = "男";
+
+使用json表示对象
+var stu = {"name":"张三","age":11,"gender":"男"}
+
+2.语法
+1) json数据有键值对组成
+2) 键需要用引号引起来(单引号和双引号都可以)
+3) 值的取值类型
+    数值(整数或浮点数)
+    字符串(用""括起来)
+    布尔值(true,false)
+    数组(在{}中定义),比如{"stu":[{},{}]}
+    对象(在{}中定义),比如{"address":{"provice":"江苏",...}}
+    null
+4) 多个数据之间用,隔开
+5) 属性和值之间用:隔开
+
+3.json数据的获取
+1) json对象.键名:获取指定属性名的值
+2) json对象:["键名"]:获取指定键的值
+3) 数组对象[索引值]
+
+4.JSON对象和字符串之间的转换
+1) JSON对象转换字符串
+    JSON.Stringgify(json对象);
+2) 字符串转JSON对象
+    JSOn.parse(str);
+
+5. JavaBean和json之间的转换
+需要用到JSON解析器
+常用的JSON解析器有
+    Gson,jackson,fastjson,jasnlib....
+
+6.Gson的使用
+1)导入jar包
+2)创建Gson对象
+3)使用方法
+    toJson(javabean):将JavaBean装成json字符串
+    T fromJson(jsonString,type/class)将Json字符串转成指定类型的对象
+    3.1转成普通类型,不如Student,第二个参数写成Student.class
+    3.2转成集合,需要用到TypeToken,比如List<Student>.第二个参数写成new TypeToken<Student>
+        TypeToken泛型中定义的类型就是我们需要转换成的类型。
+
+7.json的使用
+
+
+
+
+
