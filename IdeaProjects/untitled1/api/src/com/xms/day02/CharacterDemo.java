@@ -6,6 +6,7 @@ package com.xms.day02;
  */
 public class CharacterDemo {
     public static void main(String[] args) {
+        System.out.println("aa");
 //        判断是否为大写字符
         System.out.println(Character.isUpperCase('a'));//f
 //        判断是否为小写字符
